@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicii Veterinare de Specialitate - Suflete Dragi</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Stiluri CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar-wrapper">
+        <nav class="navbar container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-paw logo-icon"></i>
+                <span>Suflete<strong>Dragi</strong></span>
+            </a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">Acasă</a>
+                <a href="animale.html" class="nav-link">Adopții</a>
+                <a href="sanctuar.html" class="nav-link">Sanctuar Sălbatic</a>
+                <a href="veterinar.html" class="nav-link active">Servicii Veterinare</a>
+                <a href="contact.html" class="nav-link">Contact & FAQ</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="animale.html?action=add" class="btn btn-primary">
+                    <i class="fa-solid fa-hand-holding-heart"></i> Dă spre adopție
+                </a>
+                <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Deschide Meniul">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ================= PAGE BANNER ================= -->
+    <section class="page-header-section" style="background: radial-gradient(circle at top, #f0f9ff, #e0f2fe);">
+        <div class="container text-center">
+            <span class="section-tag section-tag-vet"><i class="fa-solid fa-stethoscope"></i> Spital Veterinar Universitar</span>
+            <h1 class="page-title" style="color:#0369a1;">Centru de Excelență în Medicina Veterinară</h1>
+            <p class="section-desc">
+                Dotat cu aparatură de înaltă performanță, laborator propriu și bloc operator cu flux laminar. Oferim asistență chirurgicală și de urgență pentru animale de companie și faună sălbatică salvată.
+            </p>
+        </div>
+    </section>
+
+    <!-- ================= SECȚIUNE CLINICĂ & SERVICII ================= -->
+    <section class="veterinary-section" style="padding-top: 2rem;">
+        <div class="container">
+            <!-- UrgentSOS Banner -->
+            <div class="vet-emergency-banner">
+                <div class="vet-emergency-content">
+                    <div class="emergency-icon-box">
+                        <i class="fa-solid fa-truck-medical"></i>
+                    </div>
+                    <div>
+                        <strong>Dispecerat de Urgențe & Terapie Intensivă 24/7 (Exclusiv Veterinar)</strong>
+                        <p>Linie telefonică prioritară pentru traumatisme grave, accidente rutiere ale animalelor și cazuri chirurgicale urgente.</p>
+                        <div class="emergency-legal-notice">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                            <span><strong>NOTĂ LEGALĂ:</strong> Acest serviciu este <u>STRICT VETERINAR (exclusiv pentru animale)</u> și nu oferă asistență pentru oameni. <strong>NU înlocuiește Serviciul Național 112</strong>! Pentru orice urgență umană, sunați la 112.</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="tel:+40722000999" class="btn btn-emergency">
+                    <i class="fa-solid fa-phone-volume"></i> Urgențe Animale: 0722 000 999
+                </a>
+            </div>
+
+            <!-- Grid 6 Servicii Specializate -->
+            <div class="vet-services-grid">
+                <!-- Serviciu 1 -->
+                <div class="vet-card">
+                    <div class="vet-icon-wrapper icon-surgery">
+                        <i class="fa-solid fa-syringe"></i>
+                    </div>
+                    <span class="vet-pill">Chirurgie Avansată</span>
+                    <h3>Chirurgie & Ortopedie Complexă</h3>
+                    <p>Osteosinteză cu plăci și șuruburi din titan, intervenții pe coloană, artroscopie și chirurgie reconstructivă a țesuturilor moi.</p>
+                    <ul class="vet-feature-list">
+                        <li><i class="fa-solid fa-check"></i> Anestezie inhalatorie cu monitorizare multi-parametru</li>
+                        <li><i class="fa-solid fa-check"></i> Terapie intensivă post-operatorie continuă</li>
+                        <li><i class="fa-solid fa-check"></i> Diagnostic radiologic 3D pre-operator</li>
+                    </ul>
+                    <div class="vet-card-action">
+                        <span class="vet-price-tag">Tarif social / Gratuit pt. adopții</span>
+                        <button class="btn btn-outline btn-sm book-service-btn" data-service="Chirurgie & Ortopedie">Programează</button>
+                    </div>
+                </div>
+
+                <!-- Serviciu 2 -->
+                <div class="vet-card vet-card-featured">
+                    <div class="vet-featured-ribbon">Unic în România</div>
+                    <div class="vet-icon-wrapper icon-wildlife">
+                        <i class="fa-solid fa-shield-cat"></i>
+                    </div>
+                    <span class="vet-pill pill-amber">Medicină Faună & Circuri</span>
+                    <h3>Medicină pentru Animale Exotice & Wildlife</h3>
+                    <p>Departament dedicat felinelor mari de sanctuar (lei, tigri), urșilor, reptilelor și păsărilor exotice salvate din menajerii.</p>
+                    <ul class="vet-feature-list">
+                        <li><i class="fa-solid fa-check"></i> Tehnici sigure de tele-anestezie la distanță</li>
+                        <li><i class="fa-solid fa-check"></i> Protocoale specifice acreditate EAZA</li>
+                        <li><i class="fa-solid fa-check"></i> Intervenții direct în rezervații naturale</li>
+                    </ul>
+                    <div class="vet-card-action">
+                        <span class="vet-price-tag">Fondul de Sanctuar</span>
+                        <button class="btn btn-circus btn-sm book-service-btn" data-service="Medicină Animale Exotice">Programează</button>
+                    </div>
+                </div>
+
+                <!-- Serviciu 3 -->
+                <div class="vet-card">
+                    <div class="vet-icon-wrapper icon-dental">
+                        <i class="fa-solid fa-tooth"></i>
+                    </div>
+                    <span class="vet-pill">Stomatologie Reconstructivă</span>
+                    <h3>Stomatologie Veterinară & Endodonție</h3>
+                    <p>Reconstrucție canini fracturați (frecvenți la animalele care au mușcat din gratii), detartraj ultrasonic și tratament parodontal.</p>
+                    <ul class="vet-feature-list">
+                        <li><i class="fa-solid fa-check"></i> Radiologie dentară intraorală digitală</li>
+                        <li><i class="fa-solid fa-check"></i> Obturații radiculare & coroane de protecție</li>
+                        <li><i class="fa-solid fa-check"></i> Extracții chirurgicale netraumatice</li>
+                    </ul>
+                    <div class="vet-card-action">
+                        <span class="vet-price-tag">De la 150 Lei</span>
+                        <button class="btn btn-outline btn-sm book-service-btn" data-service="Stomatologie Veterinară">Programează</button>
+                    </div>
+                </div>
+
+                <!-- Serviciu 4 -->
+                <div class="vet-card">
+                    <div class="vet-icon-wrapper icon-imaging">
+                        <i class="fa-solid fa-x-ray"></i>
+                    </div>
+                    <span class="vet-pill">Imagistică de Precizie</span>
+                    <h3>Imagistică Medicală & Cardiologie</h3>
+                    <p>Ecocardiografie Doppler color, EKG digital de înaltă rezoluție și radiologie digitală pentru evaluarea funcției cardiace și respiratorii.</p>
+                    <ul class="vet-feature-list">
+                        <li><i class="fa-solid fa-check"></i> Diagnostic precoce malformații cardiace</li>
+                        <li><i class="fa-solid fa-check"></i> Ecografie abdominală de organ</li>
+                        <li><i class="fa-solid fa-check"></i> Interpretare pe loc de către medic cardiolog</li>
+                    </ul>
+                    <div class="vet-card-action">
+                        <span class="vet-price-tag">De la 120 Lei</span>
+                        <button class="btn btn-outline btn-sm book-service-btn" data-service="Imagistică & Cardiologie">Programează</button>
+                    </div>
+                </div>
+
+                <!-- Serviciu 5 -->
+                <div class="vet-card">
+                    <div class="vet-icon-wrapper icon-rehab">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <span class="vet-pill">Recuperare Fizică</span>
+                    <h3>Fizioterapie, Laser & Hidroterapie</h3>
+                    <p>Bazin încălzit cu bandă subacvatică și laserterapie de clasă IV pentru regenerarea musculară și recuperarea mobilității.</p>
+                    <ul class="vet-feature-list">
+                        <li><i class="fa-solid fa-check"></i> Hidroterapie asistată de kinetoterapeut</li>
+                        <li><i class="fa-solid fa-check"></i> Laser antiinflamator pentru osteoartrită</li>
+                        <li><i class="fa-solid fa-check"></i> Plan de reeducare a mersului</li>
+                    </ul>
+                    <div class="vet-card-action">
+                        <span class="vet-price-tag">Pachete promoționale</span>
+                        <button class="btn btn-outline btn-sm book-service-btn" data-service="Fizioterapie & Recuperare">Programează</button>
+                    </div>
+                </div>
+
+                <!-- Serviciu 6 -->
+                <div class="vet-card">
+                    <div class="vet-icon-wrapper icon-social">
+                        <i class="fa-solid fa-certificate"></i>
+                    </div>
+                    <span class="vet-pill pill-emerald">Campanie Socială</span>
+                    <h3>Sterilizare & Microcipare Gratuită</h3>
+                    <p>Program pro-bono pentru comunitate destinat stopării abandonului. Include anestezie sigură, microcip și înregistrare RECS.</p>
+                    <ul class="vet-feature-list">
+                        <li><i class="fa-solid fa-check"></i> Înregistrare oficială în baza națională RECS</li>
+                        <li><i class="fa-solid fa-check"></i> Tehnici moderne cu incizii minime</li>
+                        <li><i class="fa-solid fa-check"></i> Tratament antibiotic post-operator asigurat</li>
+                    </ul>
+                    <div class="vet-card-action">
+                        <span class="vet-price-tag" style="color:var(--primary); font-weight:700;">100% GRATUIT</span>
+                        <button class="btn btn-primary btn-sm book-service-btn" data-service="Sterilizare Gratuită">Înscrie Animal</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Prezentare Echipa de Medici -->
+            <div class="vet-team-section">
+                <div class="section-header text-center">
+                    <span class="section-tag">Profesioniști Dedicați</span>
+                    <h2 class="section-title">Echipa Noastră de Medici Specialiști</h2>
+                </div>
+                <div class="vet-team-grid">
+                    <div class="vet-member-card">
+                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=400&q=80" alt="Dr. Radu Ionescu" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=400&q=80';">
+                        <div class="vet-member-info">
+                            <h4>Dr. Radu Ionescu</h4>
+                            <span class="member-role">Medic Primar Chirurg & Specialist Wildlife</span>
+                            <p>14 ani de experiență în chirurgie ortopedică complexă și intervenții pe animale sălbatice în sanctuare din Europa.</p>
+                        </div>
+                    </div>
+                    <div class="vet-member-card">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=400&q=80" alt="Dr. Elena Pop" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1594824813689-5f2122616238?auto=format&fit=crop&w=400&q=80';">
+                        <div class="vet-member-info">
+                            <h4>Dr. Elena Pop</h4>
+                            <span class="member-role">Specialist Cardiologie & Imagistică Medicală</span>
+                            <p>Doctor în medicină veterinară, specializată în ecocardiografie Doppler avansată la Viena.</p>
+                        </div>
+                    </div>
+                    <div class="vet-member-card">
+                        <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=400&q=80" alt="Dr. Mihai Stan">
+                        <div class="vet-member-info">
+                            <h4>Dr. Mihai Stan</h4>
+                            <span class="member-role">Medic Stomatolog Veterinar</span>
+                            <p>Peste 800 de proceduri stomatologice complexe realizate pe câini, pisici și feline mari salvate din circuri.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formular În Pagină de Programare Rapidă -->
+            <div id="programare" style="margin-top: 5rem; background:#fff; padding:3rem; border-radius:var(--radius-lg); border:1px solid var(--border); box-shadow:var(--shadow-md);">
+                <div class="section-header text-center" style="margin-bottom:2rem;">
+                    <span class="section-tag section-tag-vet"><i class="fa-solid fa-calendar-plus"></i> Programări Online</span>
+                    <h2 class="section-title">Înscrie-ți animalul pentru o consultație</h2>
+                    <p class="section-desc">Completează formularul și te vom contacta telefonic pentru confirmarea orei exacte.</p>
+                </div>
+
+                <form id="vetAppointmentForm" style="max-width: 720px; margin: 0 auto;">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="vetOwnerName">Nume Proprietar / Salvator *</label>
+                            <input type="text" id="vetOwnerName" required placeholder="ex: Ana Radu">
+                        </div>
+                        <div class="form-group">
+                            <label for="vetOwnerPhone">Telefon de Contact *</label>
+                            <input type="tel" id="vetOwnerPhone" required placeholder="07xxxxxxxx">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="vetPetName">Nume Animal *</label>
+                            <input type="text" id="vetPetName" required placeholder="ex: Max sau Simba">
+                        </div>
+                        <div class="form-group">
+                            <label for="vetPetSpecies">Specie Animal *</label>
+                            <select id="vetPetSpecies" required class="custom-select">
+                                <option value="caine">Câine</option>
+                                <option value="pisica">Pisică</option>
+                                <option value="exotic">Animal Exotic / Sălbatic</option>
+                                <option value="altul">Mici mamifere / Păsări</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="vetServiceChoice">Specialitate Medicală Dorită *</label>
+                        <select id="vetServiceChoice" required class="custom-select">
+                            <option value="Chirurgie & Ortopedie">Chirurgie & Ortopedie Avansată</option>
+                            <option value="Medicină Animale Exotice">Medicină Faună & Animale Exotice (Wildlife)</option>
+                            <option value="Stomatologie Veterinară">Stomatologie & Endodonție Reconstructivă</option>
+                            <option value="Imagistică & Cardiologie">Imagistică Medicală & Ecocardiografie Doppler</option>
+                            <option value="Fizioterapie & Recuperare">Fizioterapie, Laser & Hidroterapie</option>
+                            <option value="Sterilizare Gratuită">Campanie Sterilizare & Microcipare Gratuită</option>
+                            <option value="Control General">Control General de Rutină / Vaccinare</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="vetPreferredDate">Data Preferată *</label>
+                            <input type="date" id="vetPreferredDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="vetPreferredTime">Interval Orar Preferat *</label>
+                            <select id="vetPreferredTime" required class="custom-select">
+                                <option value="dimineata">Dimineață (09:00 - 13:00)</option>
+                                <option value="dupa-amiaza">După-amiază (13:00 - 17:00)</option>
+                                <option value="seara">Seară (17:00 - 20:00)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="vetSymptoms">Simptome sau motivul consultației:</label>
+                        <textarea id="vetSymptoms" rows="3" placeholder="Descrie pe scurt istoricul medical sau simptomele..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-vet btn-large btn-block">
+                        <i class="fa-solid fa-calendar-check"></i> Trimite Cererea de Programare
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <div class="logo">
+                    <i class="fa-solid fa-paw logo-icon"></i>
+                    <span>Suflete<strong>Dragi</strong></span>
+                </div>
+                <p>Spital veterinar și centru de cercetare dedicat bunăstării animalelor și tratamentelor avansate.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigare</h4>
+                <ul>
+                    <li><a href="index.html">Acasă</a></li>
+                    <li><a href="animale.html">Adopții</a></li>
+                    <li><a href="sanctuar.html">Sanctuar Sălbatic</a></li>
+                    <li><a href="veterinar.html">Servicii Veterinare</a></li>
+                    <li><a href="contact.html">Contact & FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Dispecerat Clinică</h4>
+                <p>B-dul Medicilor Veterinari nr. 12<br>Urgențe 24/7: 0722 000 999<br>Recepție: 0722 000 111</p>
+            </div>
+            <div class="footer-col">
+                <h4>Proiect Facultate</h4>
+                <div class="project-credits">
+                    <p class="credit-item">
+                        <i class="fa-solid fa-user-graduate"></i>
+                        <span><strong>Realizat de student:</strong> Lăzărică Petruț</span>
+                    </p>
+                    <p class="credit-item">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                        <span><strong>Coordonare & Îndrumare:</strong> Profesor Emil Burtescu</span>
+                    </p>
+                </div>
+                <div class="tech-stack-badges">
+                    <span class="tech-tag">HTML5 Multi-Page</span>
+                    <span class="tech-tag">CSS Flex/Grid</span>
+                    <span class="tech-tag">JS ES6</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>&copy; 2026 SufleteDragi - Medicină veterinară de excelență.</p>
+        </div>
+    </footer>
+
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

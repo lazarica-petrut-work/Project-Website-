@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Întrebări Frecvente - Suflete Dragi</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Stiluri CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar-wrapper">
+        <nav class="navbar container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-paw logo-icon"></i>
+                <span>Suflete<strong>Dragi</strong></span>
+            </a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">Acasă</a>
+                <a href="animale.html" class="nav-link">Adopții</a>
+                <a href="sanctuar.html" class="nav-link">Sanctuar Sălbatic</a>
+                <a href="veterinar.html" class="nav-link">Servicii Veterinare</a>
+                <a href="contact.html" class="nav-link active">Contact & FAQ</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="animale.html?action=add" class="btn btn-primary">
+                    <i class="fa-solid fa-hand-holding-heart"></i> Dă spre adopție
+                </a>
+                <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Deschide Meniul">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ================= PAGE BANNER ================= -->
+    <section class="page-header-section">
+        <div class="container text-center">
+            <span class="section-tag"><i class="fa-solid fa-envelope-open-text"></i> Suntem Aici Pentru Tine</span>
+            <h1 class="page-title">Contact, Voluntariat & Întrebări Frecvente</h1>
+            <p class="section-desc">
+                Fie că vrei să adopți, să vizitezi sanctuarul, să aduci un animal la clinică sau să te alături echipei de voluntari, suntem bucuroși să te cunoaștem!
+            </p>
+        </div>
+    </section>
+
+    <!-- ================= SECȚIUNE CONTACT ================= -->
+    <section class="contact-section" style="padding-top: 2rem;">
+        <div class="container contact-container">
+            <div class="contact-info">
+                <span class="section-tag">Date Oficiale</span>
+                <h2>Centrele Noastre</h2>
+                <p>Avem locații specializate pentru fiecare nevoie: adăpost de câini și pisici, sanctuar natural în pădure și spital veterinar cu servicii de urgență.</p>
+                
+                <div class="contact-details">
+                    <div class="contact-detail-item">
+                        <i class="fa-solid fa-house-chimney"></i>
+                        <div>
+                            <strong>Centrul de Adopție (Câini & Pisici):</strong>
+                            <p>Strada Speranței nr. 42, București / Ilfov | Tel: +40 722 000 111</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail-item">
+                        <i class="fa-solid fa-hospital"></i>
+                        <div>
+                            <strong>Spitalul Veterinar Universitar & Urgențe 24/7:</strong>
+                            <p>B-dul Medicilor Veterinari nr. 12 | Urgențe SOS: +40 722 000 999</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail-item">
+                        <i class="fa-solid fa-clock"></i>
+                        <div>
+                            <strong>Program Vizite Adăpost & Adopții:</strong>
+                            <p>Sâmbătă - Duminică: 10:00 - 16:00 (cu programare prealabilă)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <h3>Trimite-ne un mesaj rapid</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="cName">Numele tău complet *</label>
+                        <input type="text" id="cName" required placeholder="ex: Maria Popescu">
+                    </div>
+                    <div class="form-group">
+                        <label for="cEmail">Adresă de e-mail *</label>
+                        <input type="email" id="cEmail" required placeholder="ex: maria@exemplu.ro">
+                    </div>
+                    <div class="form-group">
+                        <label for="cSubject">Subiectul mesajului:</label>
+                        <select id="cSubject" class="custom-select">
+                            <option value="adoptie">Informații Adopție Câine / Pisică / Companion</option>
+                            <option value="circ_sanctuar">Donații Sanctuar Sălbatic & Părinte Simbolic</option>
+                            <option value="clinica">Servicii Spital Veterinar</option>
+                            <option value="voluntariat">Vreau să devin voluntar în weekend</option>
+                            <option value="donatii">Donații corporative / Sponsorizări</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="cMessage">Mesajul tău *</label>
+                        <textarea id="cMessage" rows="4" required placeholder="Scrie aici mesajul sau întrebarea ta..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fa-solid fa-paper-plane"></i> Trimite Mesaj
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- ================= REȚEAUA NAȚIONALĂ DE SANCTUARE (LOCAȚII DIN ROMÂNIA) ================= -->
+        <div class="container" style="margin-top: 4.5rem;">
+            <div class="section-header text-center">
+                <span class="section-tag" style="background:#fffbeb; color:#b45309; border-color:#fde68a;">
+                    <i class="fa-solid fa-tree"></i> Rețeaua Națională de Sanctuare
+                </span>
+                <h2 class="section-title">Sanctuarele Noastre Specializate din România</h2>
+                <p class="section-desc">
+                    Fiecare specie sălbatică sau de fermă salvată este găzduită într-un habitat adecvat nevoilor sale biologice, repartizat în rezervații protejate pe tot teritoriul țării:
+                </p>
+            </div>
+
+            <div class="sanctuary-centers-grid">
+                <!-- Sanctuar 1: Brașov -->
+                <div class="sanctuary-center-card">
+                    <div>
+                        <div class="center-card-header">
+                            <div class="center-icon"><i class="fa-solid fa-paw"></i></div>
+                            <div>
+                                <h3 class="center-title">Sanctuarul de Feline Mari & Urși „Poiana Bucegilor”</h3>
+                                <span class="center-loc-badge"><i class="fa-solid fa-location-dot"></i> Râșnov - Valea Glăjăriei, Jud. Brașov</span>
+                            </div>
+                        </div>
+                        <div class="center-card-body">
+                            <p>Platou montan împrejmuit de 45 de hectare la liziera pădurii carpatine, prevăzut cu bazine alpine de înot pentru tigri și adăposturi izolate fonic.</p>
+                            <ul class="center-details-list">
+                                <li><i class="fa-solid fa-check"></i> <strong>Specii ocrotite:</strong> Lei africani, tigri bengalezi/siberieni, urși bruni și râși carpatini</li>
+                                <li><i class="fa-solid fa-check"></i> <strong>Proveniență:</strong> Circuri falimentare și menajerii private desființate</li>
+                                <li><i class="fa-solid fa-check"></i> <strong>Dotări:</strong> Spital veterinar de teren, supraveghere video 24/7</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="center-card-footer">
+                        <span>Acces: Doar Zilele Porților Deschise</span>
+                        <a href="mailto:sanctuar.brasov@sufletedragi.ro"><i class="fa-solid fa-envelope"></i> sanctuar.brasov@sufletedragi.ro</a>
+                    </div>
+                </div>
+
+                <!-- Sanctuar 2: Dobrogea -->
+                <div class="sanctuary-center-card">
+                    <div>
+                        <div class="center-card-header">
+                            <div class="center-icon"><i class="fa-solid fa-sun"></i></div>
+                            <div>
+                                <h3 class="center-title">Rezervația de Faună de Stepă „Colinele Dobrogei”</h3>
+                                <span class="center-loc-badge"><i class="fa-solid fa-location-dot"></i> Podișul Casimcea - Com. Stejaru, Jud. Tulcea</span>
+                            </div>
+                        </div>
+                        <div class="center-card-body">
+                            <p>Habitat de 65 de hectare de stepă uscată și coline însorite, cu pavilioane bioclimatice încălzite solar pe timp de iarnă pentru animalele de climat cald.</p>
+                            <ul class="center-details-list">
+                                <li><i class="fa-solid fa-check"></i> <strong>Specii ocrotite:</strong> Girafe Rothschild, zebre de stepă, cămile bactriene, dromaderi și lame</li>
+                                <li><i class="fa-solid fa-check"></i> <strong>Proveniență:</strong> Grădini zoo comerciale neconforme din Europa de Est</li>
+                                <li><i class="fa-solid fa-check"></i> <strong>Dotări:</strong> Pășune deschisă, adăpători automate termostatate</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="center-card-footer">
+                        <span>Acces: Tururi ghidate pentru sponsori</span>
+                        <a href="mailto:sanctuar.dobrogea@sufletedragi.ro"><i class="fa-solid fa-envelope"></i> sanctuar.dobrogea@sufletedragi.ro</a>
+                    </div>
+                </div>
+
+                <!-- Sanctuar 3: Vrancea -->
+                <div class="sanctuary-center-card">
+                    <div>
+                        <div class="center-card-header">
+                            <div class="center-icon"><i class="fa-solid fa-shield-cat"></i></div>
+                            <div>
+                                <h3 class="center-title">Refugiul Primate & Mici Mamifere „Lunca Siretului”</h3>
+                                <span class="center-loc-badge"><i class="fa-solid fa-location-dot"></i> Pădurea Neagră - Pădureni, Jud. Vrancea</span>
+                            </div>
+                        </div>
+                        <div class="center-card-body">
+                            <p>Complex bio-climatic modern cu 3 domuri geodezice climatizate la 24°C, vegetație tropicală simbolică și tuneluri suspendate de joacă.</p>
+                            <ul class="center-details-list">
+                                <li><i class="fa-solid fa-check"></i> <strong>Specii ocrotite:</strong> Lemuri cu coadă inelată, maimuțe capucin, macaci și colonii de suricate</li>
+                                <li><i class="fa-solid fa-check"></i> <strong>Proveniență:</strong> Confiscări vamale și minizoo-uri falimentate</li>
+                                <li><i class="fa-solid fa-check"></i> <strong>Dotări:</strong> Iluminare circadiană UVB, dietă fructiferă dedicată</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="center-card-footer">
+                        <span>Acces: Vizite educaționale școlare</span>
+                        <a href="mailto:sanctuar.vrancea@sufletedragi.ro"><i class="fa-solid fa-envelope"></i> sanctuar.vrancea@sufletedragi.ro</a>
+                    </div>
+                </div>
+
+                <!-- Sanctuar 4: Apuseni -->
+                <div class="sanctuary-center-card">
+                    <div>
+                        <div class="center-card-header">
+                            <div class="center-icon"><i class="fa-solid fa-mountain"></i></div>
+                            <div>
+                                <h3 class="center-title">Sanctuarul Ursului & Lupilor „Codrii Apusenilor”</h3>
+                                <span class="center-loc-badge"><i class="fa-solid fa-location-dot"></i> Valea Iadului - Munții Pădurea Craiului, Jud. Bihor</span>
+                            </div>
+                        </div>
+                        <div class="center-card-body">
+                            <p>55 de hectare de pădure virgină izolată cu stâncării și peșteri naturale de hibernare, fără niciun contact vizual cu publicul larg pentru liniște deplină.</p>
+                            <ul class="center-details-list">
+                                <li><i class="fa-solid fa-check"></i> <strong>Specii ocrotite:</strong> Urși carpatini răniți și haite de lupi salvați din lațuri ilegale</li>
+                                <li><i class="fa-solid fa-check"></i> <strong>Proveniență:</strong> Braconaj ilegal și foste restaurante cu menajerii</li>
+                                <li><i class="fa-solid fa-check"></i> <strong>Dotări:</strong> Perimetru securizat cu senzori seismici și gard electric dublu</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="center-card-footer">
+                        <span>Acces: Zonă strict științifică (fără vizite)</span>
+                        <a href="mailto:sanctuar.apuseni@sufletedragi.ro"><i class="fa-solid fa-envelope"></i> sanctuar.apuseni@sufletedragi.ro</a>
+                    </div>
+                </div>
+
+                <!-- Sanctuar 5: Ilfov -->
+                <div class="sanctuary-center-card">
+                    <div>
+                        <div class="center-card-header">
+                            <div class="center-icon"><i class="fa-solid fa-horse"></i></div>
+                            <div>
+                                <h3 class="center-title">Centrul de Ecvidee & Fermă Etică „Câmpia Soarelui”</h3>
+                                <span class="center-loc-badge"><i class="fa-solid fa-location-dot"></i> Pășunile Gruiu-Lipia, Jud. Ilfov</span>
+                            </div>
+                        </div>
+                        <div class="center-card-body">
+                            <p>35 de hectare de pășune curată, grajduri din lemn masiv cu ventilație naturală și pistă specială de amortizare pentru recuperare ortopedică.</p>
+                            <ul class="center-details-list">
+                                <li><i class="fa-solid fa-check"></i> <strong>Specii ocrotite:</strong> Cai de sport pensionați, măgăruși carpatini, ponei și vițeluși salvați</li>
+                                <li><i class="fa-solid fa-check"></i> <strong>Proveniență:</strong> Munci grele forestiere, abandon și abatoare</li>
+                                <li><i class="fa-solid fa-check"></i> <strong>Dotări:</strong> Fierărie ortopedică veterinară, program de terapie asistată</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="center-card-footer">
+                        <span>Acces: Vizite de weekend cu programare</span>
+                        <a href="mailto:sanctuar.ecvidee@sufletedragi.ro"><i class="fa-solid fa-envelope"></i> sanctuar.ecvidee@sufletedragi.ro</a>
+                    </div>
+                </div>
+
+                <!-- Sanctuar 6: Gorj -->
+                <div class="sanctuary-center-card">
+                    <div>
+                        <div class="center-card-header">
+                            <div class="center-icon"><i class="fa-solid fa-feather"></i></div>
+                            <div>
+                                <h3 class="center-title">Oaza Aviană & Refugiul Răpitoarelor „Defileul Jiului”</h3>
+                                <span class="center-loc-badge"><i class="fa-solid fa-location-dot"></i> Cheile Sohodolului - Com. Runcu, Jud. Gorj</span>
+                            </div>
+                        </div>
+                        <div class="center-card-body">
+                            <p>Voliere alpine gigantice de 28 de metri înălțime integrate în stâncile defileului, concepute pentru păsări mari cu leziuni parțiale ale aripilor.</p>
+                            <ul class="center-details-list">
+                                <li><i class="fa-solid fa-check"></i> <strong>Specii ocrotite:</strong> Vulturi pleșuvi, bufnițe mari Uhu, șoimi călători și papagali Ara</li>
+                                <li><i class="fa-solid fa-check"></i> <strong>Proveniență:</strong> Electrocutări pe linii de înaltă tensiune și captivitate</li>
+                                <li><i class="fa-solid fa-check"></i> <strong>Dotări:</strong> Tunel de antrenament al zborului, clinică oftalmologică aviară</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="center-card-footer">
+                        <span>Acces: Observator ornitologic de la distanță</span>
+                        <a href="mailto:sanctuar.pasari@sufletedragi.ro"><i class="fa-solid fa-envelope"></i> sanctuar.pasari@sufletedragi.ro</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SECȚIUNE FAQ ACCORDION (CU ÎNTREBĂRI SERIOASE ȘI AMUZANTE) ================= -->
+    <section class="faq-section" id="faq" style="background:#fff; padding: 5rem 0;">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Clarificări, Răspunsuri & Curiozități</span>
+                <h2 class="section-title">Întrebări Frecvente Despre Toate Activitățile Noastre</h2>
+                <p class="section-desc">Ghid complet: de la proceduri oficiale de adopție și donații sanctuar, până la dileme amuzante trimise de vizitatori:</p>
+            </div>
+
+            <div class="faq-accordion" id="faqAccordion">
+                <!-- FAQ 1 (Oficial) -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Cât costă să adopți un câine sau o pisică de pe această platformă?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>Adopția este 100% gratuită!</strong> Toate animalele noastre de companie pleacă deparazitate intern/extern, vaccinate, microcipate și sterilizate (în cazul celor de vârstă potrivită). Nu percepem nicio taxă.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 (Amuzant - Girafa) -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Pot adopta o girafă dacă am tavanul înalt la apartament (3.8 metri, bloc interbelic)? <span class="faq-funny-pill"><i class="fa-solid fa-face-smile"></i> Curiozitate</span></span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Deși comisia noastră locativă apreciază patrimoniul arhitectural interbelic și tavanele generoase de 3.8 metri, <strong>girafele adulte din sanctuar ating în mod curent între 4.8 și 5.5 metri înălțime</strong>. Acest lucru ar obliga girafa să stea cu gâtul permanent înclinat la 45 de grade sau să își salute vecinii de la etajul 3 prin planșeu. În plus, o girafă consumă circa 30 kg de crengi de salcâm pe zi, nu ficus de sufragerie. Girafele rămân strict în rezervația din Dobrogea, dar le puteți susține ca Părinte Simbolic cu o donație lunară, scutindu-vă asociația de proprietari de complicații structurale!</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 (Oficial) -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Pot lua acasă un leu sau un tigru salvat dintr-un circ desființat?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>Categoric nu!</strong> Animalele sălbatice mari nu pot fi deținute legal de persoane fizice și au nevoie de condiții speciale de siguranță, spațiu și alimentație. Pentru acestea funcționează <strong>Donația pentru Sanctuar</strong>: le susții financiar hrana și asistența medicală, primești certificat oficial de susținător, rapoarte foto/video și le poți vizita la Zilele Porților Deschise.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 (Amuzant - Pisica) -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Dacă pisica adoptată mă privește cu dispreț suveran și refuză să execute comenzi, beneficiază de garanție sau drept de retur? <span class="faq-funny-pill"><i class="fa-solid fa-face-smile"></i> Curiozitate</span></span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Conform standardelor etologice internaționale, <strong>privirea de superioritate aristocratică și disprețul profund reprezintă setările standard din fabrică</strong> ale oricărei feline perfect sănătoase. Din punct de vedere juridic-felin, nu dumneavoastră ați adoptat pisica, ci pisica a consimțit cu mărinimie să locuiască în aceeași incintă, permițându-vă privilegiul onorific de a-i achita hrana și de a-i curăța litiera la ore fixe. Dacă pisica toarce măcar 90 de secunde pe săptămână și vă permite să o mângâiați când vrea ea, se consideră că funcționează la randament optim.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 (Oficial) -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Pot veni cu propriul animal de companie la spitalul vostru veterinar?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>Da!</strong> Spitalul nostru veterinar universitar primește pacienți din toată țara pentru consultații de specialitate (chirurgie, stomatologie, cardiologie, ortopedie). Veniturile obținute din serviciile plătite subvenționează direct tratamentele animalelor fără stăpân și ale celor din sanctuare!</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 6 (Amuzant - Leul la terasă) -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Dacă donez pentru un leu din sanctuar, îl pot scoate duminica în lesă în Parcul Herăstrău sau la o terasă pet-friendly? <span class="faq-funny-pill"><i class="fa-solid fa-face-smile"></i> Curiozitate</span></span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Am analizat acest scenariu cu maximă atenție din perspectivă logistică și de siguranță publică. Deși un leu de 230 kg ar rezolva instantaneu orice dispută privind eliberarea unei mese la terasă, din păcate <strong>niciun producător autorizat nu fabrică lese retractabile flexi certificate pentru forțe de tracțiune de 4 kilonewtoni</strong>. De asemenea, ospătarii tind să se panicheze când clientul comandă 12 kg de pulpă crudă de vită la garnitură. Donația vă aduce însă un Certificat Oficial, fotografii la rezoluție maximă și invitație la Zilele Porților Deschise în rezervație.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 7 (Amuzant - Papucii și telecomanda) -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Câinele adoptat a mâncat o telecomandă, doi papuci și jumătate dintr-un raport contabil. Este inclus acest incident în contract? <span class="faq-funny-pill"><i class="fa-solid fa-face-smile"></i> Curiozitate</span></span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Conform art. 4 al Codului Nescris al Fericirii Canine, papucii constituie o ofrandă tradițională de bun-venit din partea familiei adoptatoare. Telecomenzile sunt de obicei degustate pentru a vă descuraja sedentarismul și a vă trimite la plimbare în parc, iar raportul contabil a fost, cel mai probabil, considerat defectuos din punct de vedere fiscal de către cățel. Vă recomandăm jucării de ros din cauciuc dur și ascunderea încălțămintei la peste 1.6 metri altitudine. Clinica noastră vă asigură radiografii dacă suspectați că butoanele telecomenzii încă emit din stomac!</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 8 (Amuzant - Dihorul la birou) -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Pot aduce un dihor domestic la ședințele pe Zoom în calitate de consultant juridic sau manager de proiect? <span class="faq-funny-pill"><i class="fa-solid fa-face-smile"></i> Curiozitate</span></span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Dihorii au abilități dovedite de negociere rapidă: pot sustrage simultan două pixuri, o pereche de căști wireless și cheile de la birou în mai puțin de 30 de secunde. Totuși, dihorii dorm în medie 18 ore pe zi și au obiceiul de a trimite mesaje incoerente pe Teams mergând de-a curmezișul pe tastatură. Dacă echipa dumneavoastră are nevoie de relaxare și umor, dihorul este asistentul ideal, însă nu ne asumăm răspunderea dacă acesta aprobă accidental cereri de concediu în timp ce se rostogolește pe mouse.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 9 (Amuzant - Viteza țestoasei) -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Cât de des trebuie să scot țestoasa la alergat pentru a-și menține condiția fizică de maratonist? <span class="faq-funny-pill"><i class="fa-solid fa-face-smile"></i> Curiozitate</span></span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Contrar fabulelor antice cu iepurele și broasca țestoasă, un antrenament cardio intensiv pentru o țestoasă de uscat constă într-o <strong>plimbare tactică de 14 metri pe oră</strong>, urmată de un somn binemeritat de 6 ore la soare și o frunză crocantă de păpădie. Nu este necesar să îi achiziționați pantofi de alergare sau smartwatch cu GPS. Un spațiu sigur cu substrat natural și lămpi UVB adecvate este tot ce îi trebuie pentru a atinge o bătrânețe venerabilă de 70-80 de ani!</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 10 (Oficial) -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Cum pot deveni voluntar în weekend?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ai nevoie doar de dragoste pentru animale și dorință de a ajuta! Trimite-ne un mesaj prin formularul de pe această pagină cu opțiunea „Vreau să devin voluntar”. Vei participa la o scurtă sesiune de instruire și vei putea plimba cățeii, socializa pisicile sau ajuta la evenimentele de adopție.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 11 (Oficial) -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Ce se întâmplă dacă animalul adoptat nu se acomodează?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Oferim consiliere gratuită de comportament canin/felin. În cazul rar în care acomodarea e imposibilă, animalul se poate întoarce oricând la noi – avem o politică strictă: niciun animal adoptat nu va ajunge vreodată pe stradă.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <div class="logo">
+                    <i class="fa-solid fa-paw logo-icon"></i>
+                    <span>Suflete<strong>Dragi</strong></span>
+                </div>
+                <p>Platformă educațională universitară dedicată protecției animalelor, adopției responsabile și asistenței veterinare de calitate.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigare</h4>
+                <ul>
+                    <li><a href="index.html">Acasă</a></li>
+                    <li><a href="animale.html">Adopții</a></li>
+                    <li><a href="sanctuar.html">Sanctuar Sălbatic</a></li>
+                    <li><a href="veterinar.html">Servicii Veterinare</a></li>
+                    <li><a href="contact.html">Contact & FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>E-mail: contact@sufletedragi.ro<br>Telefon: +40 722 000 111</p>
+            </div>
+            <div class="footer-col">
+                <h4>Proiect Facultate</h4>
+                <div class="project-credits">
+                    <p class="credit-item">
+                        <i class="fa-solid fa-user-graduate"></i>
+                        <span><strong>Realizat de student:</strong> Lăzărică Petruț</span>
+                    </p>
+                    <p class="credit-item">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                        <span><strong>Coordonare & Îndrumare:</strong> Profesor Emil Burtescu</span>
+                    </p>
+                </div>
+                <div class="tech-stack-badges">
+                    <span class="tech-tag">HTML5 Multi-Page</span>
+                    <span class="tech-tag">CSS Flex/Grid</span>
+                    <span class="tech-tag">JS ES6</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>&copy; 2026 SufleteDragi - Toate drepturile rezervate.</p>
+        </div>
+    </footer>
+
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

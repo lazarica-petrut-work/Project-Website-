@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopții - Registru Național de Companioni | SufleteDragi</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Stiluri CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar-wrapper">
+        <nav class="navbar container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-paw logo-icon"></i>
+                <span>Suflete<strong>Dragi</strong></span>
+            </a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">Acasă</a>
+                <a href="animale.html" class="nav-link active">Adopții</a>
+                <a href="sanctuar.html" class="nav-link">Sanctuar Sălbatic</a>
+                <a href="veterinar.html" class="nav-link">Servicii Veterinare</a>
+                <a href="contact.html" class="nav-link">Contact & FAQ</a>
+            </div>
+
+            <div class="nav-actions">
+                <button class="btn btn-primary" id="openAddModalBtn">
+                    <i class="fa-solid fa-hand-holding-heart"></i> Dă spre adopție
+                </button>
+                <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Deschide Meniul">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ================= PAGE BANNER ================= -->
+    <section class="page-header-section">
+        <div class="container text-center">
+            <span class="section-tag"><i class="fa-solid fa-paw"></i> Registru Național & Adopții Responsabile</span>
+            <h1 class="page-title">Adopții Animale de Companie & Fermă</h1>
+            <p class="section-desc">
+                Găsește-ți prietenul pe viață: 50 de suflete (câini, pisici, porcușori de Guineea, iepurași, țestoase, pești, dihori, veverițe, păsări, ponei, măgari și cai) vaccinate, îngrijite și pregătite pentru o familie iubitoare.
+            </p>
+        </div>
+    </section>
+
+    <!-- ================= BAZĂ DE DATE, FILTRARE & REGISTRU ================= -->
+    <section class="pets-section" id="catalog-section" style="padding-top: 0.5rem;">
+        <div class="container">
+
+            <!-- Banner Notificare Ghidare Către Sanctuar -->
+            <div class="sanctuary-redirect-notice" style="background:#fffbeb; border:1px solid #fde68a; border-radius:var(--radius-md); padding:0.85rem 1.25rem; margin-bottom:1.25rem; display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap; box-shadow:0 2px 8px rgba(217,119,6,0.08);">
+                <div style="display:flex; align-items:center; gap:0.75rem; color:#92400e; font-size:0.92rem;">
+                    <i class="fa-solid fa-tree" style="color:#d97706; font-size:1.2rem;"></i>
+                    <span><strong>Cauți animalele sălbatice (lei, girafe, zebre, urși, lupi)?</strong> Acestea trăiesc ocrotite pe viață în Sanctuar și nu sunt disponibile pentru adopție fizică acasă. Le poți susține pe pagina dedicată!</span>
+                </div>
+                <a href="sanctuar.html" class="btn btn-circus btn-sm" style="white-space:nowrap;">
+                    <i class="fa-solid fa-hand-holding-heart"></i> Mergi la Sanctuar & Donează
+                </a>
+            </div>
+
+            <!-- Bara Superioară de Control & Statistici Bază de Date -->
+            <div class="db-header-bar">
+                <div class="db-stats-group">
+                    <div class="db-stat-pill">
+                        <i class="fa-solid fa-database"></i>
+                        <span id="dbTotalCount">50 animăluțe</span>
+                    </div>
+                    <div class="db-stat-pill">
+                        <i class="fa-solid fa-syringe"></i>
+                        <span id="dbVaccinatedRate">100% Verificate</span>
+                    </div>
+                    <div class="db-stat-pill pill-urgent">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <span id="dbUrgentCount">Urgențe Active</span>
+                    </div>
+                </div>
+
+                <div class="db-controls-group">
+                    <!-- Comutator Mod Vizualizare -->
+                    <div class="view-toggle-btns">
+                        <button class="view-btn active" id="viewCardsBtn" title="Afișează ca Grilă de Carduri">
+                            <i class="fa-solid fa-grip"></i> Carduri
+                        </button>
+                        <button class="view-btn" id="viewTableBtn" title="Afișează ca Tabel Registru">
+                            <i class="fa-solid fa-table-list"></i> Tabel Registru
+                        </button>
+                    </div>
+
+                    <!-- Buton Export CSV -->
+                    <button class="btn-export-csv" id="exportCsvBtn" title="Descarcă datele filtrate în format CSV (Excel)">
+                        <i class="fa-solid fa-file-csv"></i> Exportă CSV
+                    </button>
+                </div>
+            </div>
+
+            <!-- Zona Principală de Filtrare și Căutare Multi-Criterială -->
+            <div class="filter-panel">
+                <!-- Rândul 1: Căutare Text Liberă -->
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="searchInput" placeholder="Caută după nume (ex: Ciolănel, Covrig, Pisi-Cozonac), categorie (ex: câine, pisică, porcușor, dihor, ponei, papagal), rasă sau oraș...">
+                </div>
+
+                <!-- Rândul 2: Filtre Principale (Tip Animal, Locație, Talie, Sex) -->
+                <div class="filter-controls">
+                    <!-- Filtru Categorie / Tip Specific de Animal (Pills) -->
+                    <div class="filter-group" style="width:100%;">
+                        <label><i class="fa-solid fa-paw"></i> Selectează Tipul de Animal:</label>
+                        <div class="category-pills" id="speciesFilter">
+                            <button class="pill active" data-type="toate"><i class="fa-solid fa-paw"></i> Toate (50)</button>
+                            <button class="pill" data-type="caine"><i class="fa-solid fa-dog"></i> Câini (14)</button>
+                            <button class="pill" data-type="pisica"><i class="fa-solid fa-cat"></i> Pisici (12)</button>
+                            <button class="pill" data-type="porcusor"><i class="fa-solid fa-cookie"></i> Porcușori Guineea (3)</button>
+                            <button class="pill" data-type="iepure"><i class="fa-solid fa-carrot"></i> Iepurași (3)</button>
+                            <button class="pill" data-type="testoasa"><i class="fa-solid fa-shield"></i> Țestoase (2)</button>
+                            <button class="pill" data-type="peste"><i class="fa-solid fa-fish"></i> Pești (2)</button>
+                            <button class="pill" data-type="dihor"><i class="fa-solid fa-mask"></i> Dihori (2)</button>
+                            <button class="pill" data-type="veverita"><i class="fa-solid fa-tree"></i> Veverițe (2)</button>
+                            <button class="pill" data-type="pasare"><i class="fa-solid fa-dove"></i> Păsări & Papagali (2)</button>
+                            <button class="pill" data-type="ponei"><i class="fa-solid fa-horse-head"></i> Ponei (2)</button>
+                            <button class="pill" data-type="magar"><i class="fa-solid fa-heart"></i> Măgăruși (2)</button>
+                            <button class="pill" data-type="cal"><i class="fa-solid fa-horse"></i> Cai (2)</button>
+                            <button class="pill" data-type="ferma"><i class="fa-solid fa-cow"></i> Fermă: Viței & Căprițe (2)</button>
+                        </div>
+                    </div>
+
+                    <!-- Dropdown Tip Animal (Pentru filtrare rapidă din formular) -->
+                    <div class="filter-group select-group">
+                        <label for="animalTypeFilter"><i class="fa-solid fa-filter" style="color:#059669;"></i> Filtru Categorie:</label>
+                        <select id="animalTypeFilter" class="custom-select">
+                            <option value="toate">Toate Tipurile (50)</option>
+                            <option value="caine">Câini (14)</option>
+                            <option value="pisica">Pisici (12)</option>
+                            <option value="porcusor">Porcușori de Guineea (3)</option>
+                            <option value="iepure">Iepurași de Companie (3)</option>
+                            <option value="testoasa">Țestoase (2)</option>
+                            <option value="peste">Pești de Acvariu (2)</option>
+                            <option value="dihor">Dihori Domestici (2)</option>
+                            <option value="veverita">Veverițe (2)</option>
+                            <option value="pasare">Păsări & Papagali (2)</option>
+                            <option value="ponei">Ponei (2)</option>
+                            <option value="magar">Măgăruși (2)</option>
+                            <option value="cal">Cai de Sport & Tracțiune (2)</option>
+                            <option value="ferma">Animale de Fermă: Viței, Văcuțe, Oițe, Căprițe (2)</option>
+                        </select>
+                    </div>
+
+                    <!-- Filtru Locație (România) -->
+                    <div class="filter-group select-group">
+                        <label for="locationFilter"><i class="fa-solid fa-location-dot" style="color:#0284c7;"></i> Oraș / Județ:</label>
+                        <select id="locationFilter" class="custom-select">
+                            <option value="toate">Toată România (Toate Orașele)</option>
+                            <option value="București">București</option>
+                            <option value="Cluj-Napoca">Cluj-Napoca</option>
+                            <option value="Brașov">Brașov</option>
+                            <option value="Timișoara">Timișoara</option>
+                            <option value="Iași">Iași</option>
+                            <option value="Constanța">Constanța</option>
+                            <option value="Sibiu">Sibiu</option>
+                            <option value="Oradea">Oradea</option>
+                            <option value="Craiova">Craiova</option>
+                            <option value="Ploiești">Ploiești</option>
+                            <option value="Arad">Arad</option>
+                            <option value="Galați">Galați</option>
+                        </select>
+                    </div>
+
+                    <!-- Filtru Talie -->
+                    <div class="filter-group select-group">
+                        <label for="sizeFilter">Talie:</label>
+                        <select id="sizeFilter" class="custom-select">
+                            <option value="toate">Oricare</option>
+                            <option value="mica">Mică (< 10 kg)</option>
+                            <option value="medie">Medie (10 - 25 kg)</option>
+                            <option value="mare">Mare (> 25 kg)</option>
+                        </select>
+                    </div>
+
+                    <!-- Filtru Sex -->
+                    <div class="filter-group select-group">
+                        <label for="genderFilter">Sex:</label>
+                        <select id="genderFilter" class="custom-select">
+                            <option value="toate">Oricare</option>
+                            <option value="mascul">Mascul</option>
+                            <option value="femela">Femelă</option>
+                        </select>
+                    </div>
+
+                    <button class="btn btn-ghost" id="resetFiltersBtn" title="Resetează toate filtrele">
+                        <i class="fa-solid fa-rotate-left"></i> Resetează
+                    </button>
+                </div>
+
+                <!-- Rândul 3: Filtre Medicale & Sortare Avansată -->
+                <div class="filter-row-advanced">
+                    <div class="medical-filter-checks">
+                        <span style="font-size:0.85rem; font-weight:700; color:var(--dark);">
+                            <i class="fa-solid fa-stethoscope"></i> Criterii Medicale:
+                        </span>
+                        <label class="checkbox-pill">
+                            <input type="checkbox" id="filterVaccinated">
+                            <span>Doar Vaccinate</span>
+                        </label>
+                        <label class="checkbox-pill">
+                            <input type="checkbox" id="filterSterilized">
+                            <span>Doar Sterilizate</span>
+                        </label>
+                        <label class="checkbox-pill">
+                            <input type="checkbox" id="filterMicrochipped">
+                            <span>Doar cu Microcip RECS</span>
+                        </label>
+                    </div>
+
+                    <!-- Dropdown Sortare Inteligentă -->
+                    <div class="sort-select-wrapper">
+                        <label for="sortSelect"><i class="fa-solid fa-arrow-down-short-wide"></i> Sortează Baza:</label>
+                        <select id="sortSelect" class="custom-select" style="font-weight:600;">
+                            <option value="default">Recomandate / Implicite</option>
+                            <option value="ageAsc">Vârstă: Crescător (Pui ➔ Senior)</option>
+                            <option value="ageDesc">Vârstă: Descrescător (Senior ➔ Pui)</option>
+                            <option value="nameAsc">Nume: Alfabetic (A ➔ Z)</option>
+                            <option value="nameDesc">Nume: Alfabetic (Z ➔ A)</option>
+                            <option value="urgent">Urgențe Medicale Prioritare</option>
+                            <option value="newest">Cele mai recent înregistrate</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Indicator Rezultate & Favorite Active -->
+            <div class="results-info">
+                <span id="resultsCount">Se interoghează baza de date...</span>
+                <span id="activeFilterBadge" class="active-filter-badge" style="display: none;">
+                    Filtru activ: Doar Favoritele Tale <i class="fa-solid fa-xmark" id="clearFavoritesFilter"></i>
+                </span>
+            </div>
+
+            <!-- 1. VEDEREA TABEL (REGISTRU BAZĂ DE DATE) -->
+            <div class="db-table-container" id="dbTableContainer">
+                <div class="table-responsive">
+                    <table class="db-table">
+                        <thead>
+                            <tr>
+                                <th>Animal & Cod RECS</th>
+                                <th>Specie / Rasă</th>
+                                <th>Vârstă</th>
+                                <th>Locație (România)</th>
+                                <th>Statut Medical</th>
+                                <th>Status</th>
+                                <th style="text-align:right;">Acțiuni</th>
+                            </tr>
+                        </thead>
+                        <tbody id="dbTableBody">
+                            <!-- Rândurile se generează dinamic prin JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 2. VEDEREA GRILĂ DE CARDURI (CARD VIEW) -->
+            <div class="pets-grid" id="petsGrid">
+                <!-- Cardurile se generează dinamic prin JavaScript -->
+            </div>
+
+            <!-- Mesaj Stare Goală -->
+            <div class="empty-state" id="emptyState" style="display: none;">
+                <i class="fa-solid fa-paw empty-icon"></i>
+                <h3>Nu am găsit nicio înregistrare conform acestor criterii</h3>
+                <p>Încearcă să schimbi orașul selectat sau să debifezi filtrele medicale stricte.</p>
+                <button class="btn btn-outline" id="emptyResetBtn">Resetează Interogarea</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <div class="logo">
+                    <i class="fa-solid fa-paw logo-icon"></i>
+                    <span>Suflete<strong>Dragi</strong></span>
+                </div>
+                <p>Platformă universitară cu registru integrat de date pentru protecția și adopția animalelor din România.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigare</h4>
+                <ul>
+                    <li><a href="index.html">Acasă</a></li>
+                    <li><a href="animale.html">Adopții</a></li>
+                    <li><a href="sanctuar.html">Sanctuar Sălbatic (Donații)</a></li>
+                    <li><a href="veterinar.html">Servicii Veterinare</a></li>
+                    <li><a href="contact.html">Contact & FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Centre Înregistrate</h4>
+                <p>București, Cluj, Timișoara, Brașov, Constanța, Iași, Sibiu, Oradea<br>Asistență: contact@sufletedragi.ro</p>
+            </div>
+            <div class="footer-col">
+                <h4>Proiect Facultate</h4>
+                <div class="project-credits">
+                    <p class="credit-item">
+                        <i class="fa-solid fa-user-graduate"></i>
+                        <span><strong>Realizat de student:</strong> Lăzărică Petruț</span>
+                    </p>
+                    <p class="credit-item">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                        <span><strong>Coordonare & Îndrumare:</strong> Profesor Emil Burtescu</span>
+                    </p>
+                </div>
+                <div class="tech-stack-badges">
+                    <span class="tech-tag">Dynamic Sorting</span>
+                    <span class="tech-tag">CSV Data Export</span>
+                    <span class="tech-tag">Dual View (Grid/Table)</span>
+                    <span class="tech-tag">LocalStorage API</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>&copy; 2026 SufleteDragi - Registru Național de Adopții.</p>
+        </div>
+    </footer>
+
+    <!-- Modale comune -->
+    <div class="modal-backdrop" id="detailsModal">
+        <div class="modal-dialog modal-large">
+            <button class="modal-close" id="closeDetailsModalBtn">&times;</button>
+            <div class="modal-body" id="detailsModalBody"></div>
+        </div>
+    </div>
+
+    <div class="modal-backdrop" id="adoptModal">
+        <div class="modal-dialog">
+            <button class="modal-close" id="closeAdoptModalBtn">&times;</button>
+            <div class="modal-header">
+                <i class="fa-solid fa-heart-circle-check modal-header-icon" id="adoptModalIcon"></i>
+                <h3 id="adoptModalTitle">Cerere de Adopție</h3>
+                <p id="adoptModalSubtitle">Completează datele pentru a începe procesul.</p>
+            </div>
+            <form id="adoptionForm" class="modal-form">
+                <input type="hidden" id="adoptPetId">
+                <input type="hidden" id="adoptPetName">
+                <input type="hidden" id="adoptIsSanctuary">
+
+                <div class="sanctuary-notice-box" id="sanctuaryNotice" style="display: none;">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <div>
+                        <strong>Adopție Simbolică la Distanță:</strong>
+                        <span>Acest animal trăiește într-un sanctuar securizat. Prin această cerere devii părinte adoptiv simbolic.</span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="adopterName">Nume și Prenume *</label>
+                        <input type="text" id="adopterName" required placeholder="ex: Ion Popescu">
+                    </div>
+                    <div class="form-group">
+                        <label for="adopterPhone">Telefon *</label>
+                        <input type="tel" id="adopterPhone" required placeholder="07xxxxxxxx">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="adopterEmail">Adresă de e-mail *</label>
+                    <input type="email" id="adopterEmail" required placeholder="ion.popescu@gmail.com">
+                </div>
+
+                <div id="domesticFields">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="adopterHousing">Tipul locuinței *</label>
+                            <select id="adopterHousing" class="custom-select">
+                                <option value="apartament">Apartament</option>
+                                <option value="casa_curte">Casă cu curte</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="adopterExperience">Ai mai avut animale? *</label>
+                            <select id="adopterExperience" class="custom-select">
+                                <option value="da">Da, am experiență</option>
+                                <option value="nu">Nu, ar fi primul meu animal</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="sanctuaryFields" style="display: none;">
+                    <div class="form-group">
+                        <label for="sponsorTier">Pachet de susținere:</label>
+                        <select id="sponsorTier" class="custom-select">
+                            <option value="50">Părinte Adoptiv Bronz - 50 lei/lună</option>
+                            <option value="150" selected>Părinte Adoptiv Argint - 150 lei/lună</option>
+                            <option value="350">Părinte Adoptiv Aur - 350 lei/lună</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-checkbox">
+                    <input type="checkbox" id="adopterTerms" required>
+                    <label for="adopterTerms">Confirm că datele introduse sunt reale.</label>
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-ghost" id="cancelAdoptBtn">Anulează</button>
+                    <button type="submit" class="btn btn-primary" id="submitAdoptBtn">
+                        <i class="fa-solid fa-paper-plane"></i> Trimite Cererea
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Dă un Animal spre Adopție -->
+    <div class="modal-backdrop" id="addPetModal">
+        <div class="modal-dialog">
+            <button class="modal-close" id="closeAddPetModalBtn">&times;</button>
+            <div class="modal-header">
+                <i class="fa-solid fa-hand-holding-heart modal-header-icon"></i>
+                <h3>Dă un Animal spre Adopție</h3>
+                <p>Înregistrează un companion salvat pentru a-i găsi o familie responsabilă și iubitoare.</p>
+            </div>
+            <form id="addPetForm" class="modal-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="newPetName">Nume Animal *</label>
+                        <input type="text" id="newPetName" required placeholder="ex: Ciolănel, Pisi-Cozonac sau Bobiță">
+                    </div>
+                    <div class="form-group">
+                        <label for="newPetSpecies">Tip / Categorie *</label>
+                        <select id="newPetSpecies" required class="custom-select">
+                            <option value="caine">Câine</option>
+                            <option value="pisica">Pisică</option>
+                            <option value="porcusor">Porcușor de Guineea</option>
+                            <option value="iepure">Iepuraș de Companie</option>
+                            <option value="dihor">Dihor Domestic</option>
+                            <option value="altele">Alte Mici Animale / Păsări / Pești</option>
+                            <option value="ferma">Animal de Fermă / Ponei / Cal</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="newPetBreed">Rasă / Metis *</label>
+                        <input type="text" id="newPetBreed" required placeholder="ex: Metis Ciobănesc">
+                    </div>
+                    <div class="form-group">
+                        <label for="newPetLocation">Locație (Județ / Oraș) *</label>
+                        <select id="newPetLocation" required class="custom-select">
+                            <option value="București">București</option>
+                            <option value="Cluj-Napoca">Cluj-Napoca</option>
+                            <option value="Brașov">Brașov</option>
+                            <option value="Timișoara">Timișoara</option>
+                            <option value="Iași">Iași</option>
+                            <option value="Constanța">Constanța</option>
+                            <option value="Sibiu">Sibiu</option>
+                            <option value="Oradea">Oradea</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="newPetAge">Vârstă (text) *</label>
+                        <input type="text" id="newPetAge" required placeholder="ex: 2 ani sau 6 luni">
+                    </div>
+                    <div class="form-group">
+                        <label for="newPetGender">Sex *</label>
+                        <select id="newPetGender" required class="custom-select">
+                            <option value="mascul">Mascul</option>
+                            <option value="femela">Femelă</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="newPetImage">Link Imagine (URL) *</label>
+                    <input type="url" id="newPetImage" required placeholder="https://images.unsplash.com/...">
+                </div>
+
+                <div class="form-group">
+                    <label for="newPetDesc">Descriere & Istoric *</label>
+                    <textarea id="newPetDesc" rows="3" required placeholder="Povestește despre personalitatea, comportamentul și starea lui..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Statut Medical:</label>
+                    <div class="checkbox-group">
+                        <label class="inline-checkbox"><input type="checkbox" id="medVaccinated" checked> Vaccinat la zi</label>
+                        <label class="inline-checkbox"><input type="checkbox" id="medSterilized" checked> Sterilizat</label>
+                        <label class="inline-checkbox"><input type="checkbox" id="medMicrochipped" checked> Microcipat & RECS</label>
+                    </div>
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-ghost" id="cancelAddPetBtn">Anulează</button>
+                    <button type="submit" class="btn btn-primary"><i class="fa-solid fa-hand-holding-heart"></i> Dă spre adopție</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Container Notificări -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

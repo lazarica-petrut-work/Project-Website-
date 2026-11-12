@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suflete Dragi - Adopții, Sanctuar Sălbatic & Medicină Veterinară</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Stiluri CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar-wrapper">
+        <nav class="navbar container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-paw logo-icon"></i>
+                <span>Suflete<strong>Dragi</strong></span>
+            </a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link active">Acasă</a>
+                <a href="animale.html" class="nav-link">Adopții</a>
+                <a href="sanctuar.html" class="nav-link">Sanctuar Sălbatic</a>
+                <a href="veterinar.html" class="nav-link">Servicii Veterinare</a>
+                <a href="contact.html" class="nav-link">Contact & FAQ</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="animale.html?action=add" class="btn btn-primary">
+                    <i class="fa-solid fa-hand-holding-heart"></i> Dă spre adopție
+                </a>
+                <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Deschide Meniul">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero-section" id="acasa">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fa-solid fa-heart-pulse"></i> Proiect Integrat de Protecție a Animalelor
+                </div>
+                <h1 class="hero-title">O voce pentru cei care nu pot vorbi</h1>
+                <p class="hero-desc">
+                    Oferim o a doua șansă câinilor și pisicilor fără stăpân, găzduim permanent în <strong>Sanctuar</strong> animalele salvate din circuri abandonate, grădini zoo și braconaj, și asigurăm asistență de urgență în spitalul veterinar.
+                </p>
+                <div class="hero-buttons">
+                    <a href="animale.html" class="btn btn-primary btn-large">
+                        <i class="fa-solid fa-paw"></i> Adopții
+                    </a>
+                    <a href="sanctuar.html" class="btn btn-circus btn-large">
+                        <i class="fa-solid fa-tree"></i> Sanctuarul Sălbatic
+                    </a>
+                    <a href="veterinar.html" class="btn btn-vet btn-large">
+                        <i class="fa-solid fa-stethoscope"></i> Servicii Veterinare
+                    </a>
+                </div>
+
+                <!-- Statistici rapide -->
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <span class="stat-number">650+</span>
+                        <span class="stat-label">Animale Salvate</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">40 ha</span>
+                        <span class="stat-label">Rezervație Sanctuar</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Transparență Donații</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="image-wrapper">
+                    <!-- Carusel Imagini Animale -->
+                    <div class="hero-carousel" id="heroCarousel" aria-label="Galerie animăluțe protejate și disponibile">
+                        <div class="carousel-track">
+                            <!-- Slide 1: Porcușorii de Guineea (imaginea originală cerută de utilizator) -->
+                            <div class="carousel-slide active">
+                                <img src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&w=1000&q=80" alt="Porcușori de Guineea simpatici">
+                            </div>
+                            <!-- Slide 2: Câine prietenos -->
+                            <div class="carousel-slide">
+                                <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=1000&q=80" alt="Câine prietenos pentru adopție">
+                            </div>
+                            <!-- Slide 3: Pisicuță dragă -->
+                            <div class="carousel-slide">
+                                <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=1000&q=80" alt="Pisică afectuoasă">
+                            </div>
+                            <!-- Slide 4: Faună Sanctuar Sălbatic -->
+                            <div class="carousel-slide">
+                                <img src="https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?auto=format&fit=crop&w=1000&q=80" alt="Urs brun în Sanctuar Sălbatic">
+                            </div>
+                            <!-- Slide 5: Cai & Animale de Fermă -->
+                            <div class="carousel-slide">
+                                <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=1000&q=80" alt="Cal nobil salvat">
+                            </div>
+                        </div>
+
+                        <!-- Butoane navigare Stânga / Dreapta -->
+                        <button class="carousel-arrow prev" id="carouselPrevBtn" aria-label="Imaginea anterioară">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-arrow next" id="carouselNextBtn" aria-label="Imaginea următoare">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+
+                        <!-- Puncte indicatoare (dots) -->
+                        <div class="carousel-dots" id="carouselDots"></div>
+                    </div>
+
+                    <!-- Ecusoane plutitoare păstrate deasupra caruselului -->
+                    <div class="floating-badge badge-top">
+                        <i class="fa-solid fa-shield-cat"></i>
+                        <div>
+                            <strong>Platformă 100% Etică</strong>
+                            <span>Adopții gratuite & Non-Profit</span>
+                        </div>
+                    </div>
+                    <div class="floating-badge badge-bottom">
+                        <i class="fa-solid fa-tree"></i>
+                        <div>
+                            <strong>Sanctuar Deschis</strong>
+                            <span>Protecție & Hrană pe viață</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= MAREA SECȚIUNE DE CATEGORII / HUB ================= -->
+    <section class="categories-hub-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Departamentele Noastre</span>
+                <h2 class="section-title">Alege domeniul în care vrei să te implici</h2>
+                <p class="section-desc">Fiecare categorie are o pagină dedicată, cu proceduri specifice, filtre interactive și posibilități de implicare directă.</p>
+            </div>
+
+            <div class="category-cards-grid">
+                <!-- Card Categoria 1: Adopții Domestice -->
+                <div class="hub-card hub-card-adopt">
+                    <div class="hub-card-img">
+                        <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=700&q=80" alt="Câini și pisici pentru adopție">
+                        <span class="hub-pill">Adopție Fizică Acasă</span>
+                    </div>
+                    <div class="hub-card-body">
+                        <div class="hub-icon-circle icon-adopt">
+                            <i class="fa-solid fa-dog"></i>
+                        </div>
+                        <h3>Adopție Câini, Pisici, Companioni & Fermă</h3>
+                        <p>
+                            Peste 50 de animăluțe (câini, pisici, porcușori de Guineea, iepurași, țestoase, pești, veverițe, dihori, păsări, ponei, măgari și cai) vaccinate și îngrijite așteaptă o familie iubitoare. Baza națională de date îți permite filtrarea detaliată.
+                        </p>
+                        <ul class="hub-features">
+                            <li><i class="fa-solid fa-check"></i> Contract legal de adopție 100% gratuit</li>
+                            <li><i class="fa-solid fa-check"></i> Filtrare avansată după oraș din România, specie și talie</li>
+                            <li><i class="fa-solid fa-check"></i> Grilă vizuală și Tabel Registru cu export CSV</li>
+                        </ul>
+                        <div class="hub-action">
+                            <a href="animale.html" class="btn btn-primary btn-block">
+                                <i class="fa-solid fa-arrow-right"></i> Adopții
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Categoria 2: Sanctuarul Sălbatic (NOU CONCEPT ETIC) -->
+                <div class="hub-card hub-card-circus">
+                    <div class="hub-card-img">
+                        <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=700&q=80" alt="Leu reabilitat în sanctuar">
+                        <span class="hub-pill pill-amber">Sanctuar & Donații</span>
+                    </div>
+                    <div class="hub-card-body">
+                        <div class="hub-icon-circle icon-circus">
+                            <i class="fa-solid fa-tree"></i>
+                        </div>
+                        <h3>Sanctuarul Prietenilor Sălbatici</h3>
+                        <p>
+                            Adăpost permanent pentru 20 de animale sălbatice (lei, tigri, girafe, zebre, cămile, lemuri, suricate, urși, lupi și vulturi) salvate din circuri și grădini zoo închise. <strong>Nu se adoptă acasă</strong>, dar pot fi susținute printr-o <strong>donație lunară sau unică</strong>.
+                        </p>
+                        <ul class="hub-features">
+                            <li><i class="fa-solid fa-check"></i> Donează lunar (recurent) sau o singură dată</li>
+                            <li><i class="fa-solid fa-check"></i> Certificat oficial personalizat & actualizări foto/video</li>
+                            <li><i class="fa-solid fa-check"></i> Acces la Zilele Porților Deschise în rezervație</li>
+                        </ul>
+                        <div class="hub-action">
+                            <a href="sanctuar.html" class="btn btn-circus btn-block">
+                                <i class="fa-solid fa-arrow-right"></i> Sanctuar & Donează
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Categoria 3: Servicii Veterinare -->
+                <div class="hub-card hub-card-vet">
+                    <div class="hub-card-img">
+                        <img src="https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?auto=format&fit=crop&w=700&q=80" alt="Spital veterinar modern">
+                        <span class="hub-pill pill-sky">Centru Medical Universitar</span>
+                    </div>
+                    <div class="hub-card-body">
+                        <div class="hub-icon-circle icon-vet">
+                            <i class="fa-solid fa-stethoscope"></i>
+                        </div>
+                        <h3>Servicii Veterinare de Specialitate</h3>
+                        <p>
+                            Spitalul nostru veterinar oferă chirurgie ortopedică, stomatologie reconstructivă, medicină pentru faună sălbatică, fizioterapie și dispecerat de urgențe 24/7 cu ambulanță veterinară.
+                        </p>
+                        <ul class="hub-features">
+                            <li><i class="fa-solid fa-check"></i> Echipă de medici specialiști & bloc operator ATI</li>
+                            <li><i class="fa-solid fa-check"></i> Campanie gratuită de sterilizare & microcipare</li>
+                            <li><i class="fa-solid fa-check"></i> Programare online simplă pentru consultații</li>
+                        </ul>
+                        <div class="hub-action">
+                            <a href="veterinar.html" class="btn btn-vet btn-block">
+                                <i class="fa-solid fa-arrow-right"></i> Vezi Serviciile & Programează
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <div class="logo">
+                    <i class="fa-solid fa-paw logo-icon"></i>
+                    <span>Suflete<strong>Dragi</strong></span>
+                </div>
+                <p>Platformă integrată dedicată adopțiilor responsabile de animale domestice, protejării faunei în sanctuare deschise și medicinei veterinare de excelență.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Paginile Noastre</h4>
+                <ul>
+                    <li><a href="index.html">Acasă</a></li>
+                    <li><a href="animale.html">Adopții</a></li>
+                    <li><a href="sanctuar.html">Sanctuar Sălbatic (Donații)</a></li>
+                    <li><a href="veterinar.html">Clinică & Servicii Vet</a></li>
+                    <li><a href="contact.html">Contact & FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Urgențe & Contact</h4>
+                <ul>
+                    <li><i class="fa-solid fa-phone"></i> Adopții: +40 722 000 111</li>
+                    <li><i class="fa-solid fa-truck-medical" style="color:#ef4444;"></i> Urgențe Animale 24/7 (Strict Vet, nu 112): 0722 000 999</li>
+                    <li><i class="fa-solid fa-tree" style="color:#10b981;"></i> Sanctuar: sanctuar@sufletedragi.ro</li>
+                    <li><i class="fa-solid fa-location-dot"></i> Str. Speranței nr. 42, București</li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Proiect Facultate</h4>
+                <div class="project-credits">
+                    <p class="credit-item">
+                        <i class="fa-solid fa-user-graduate"></i>
+                        <span><strong>Realizat de student:</strong> Lăzărică Petruț</span>
+                    </p>
+                    <p class="credit-item">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                        <span><strong>Coordonare & Îndrumare:</strong> Profesor Emil Burtescu</span>
+                    </p>
+                </div>
+                <div class="tech-stack-badges">
+                    <span class="tech-tag">HTML5 Multi-Page</span>
+                    <span class="tech-tag">CSS3 Grid/Flex</span>
+                    <span class="tech-tag">JavaScript ES6</span>
+                    <span class="tech-tag">LocalStorage API</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>&copy; 2026 SufleteDragi - Adoptă un prieten sau susține Sanctuarul!</p>
+        </div>
+    </footer>
+
+    <!-- Modale comune -->
+    <div class="modal-backdrop" id="detailsModal">
+        <div class="modal-dialog modal-large">
+            <button class="modal-close" id="closeDetailsModalBtn">&times;</button>
+            <div class="modal-body" id="detailsModalBody"></div>
+        </div>
+    </div>
+
+    <div class="modal-backdrop" id="adoptModal">
+        <div class="modal-dialog">
+            <button class="modal-close" id="closeAdoptModalBtn">&times;</button>
+            <div class="modal-header">
+                <i class="fa-solid fa-heart-circle-check modal-header-icon" id="adoptModalIcon"></i>
+                <h3 id="adoptModalTitle">Cerere de Adopție</h3>
+                <p id="adoptModalSubtitle">Completează datele pentru a începe procesul.</p>
+            </div>
+            <form id="adoptionForm" class="modal-form">
+                <input type="hidden" id="adoptPetId">
+                <input type="hidden" id="adoptPetName">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="adopterName">Nume și Prenume *</label>
+                        <input type="text" id="adopterName" required placeholder="ex: Ion Popescu">
+                    </div>
+                    <div class="form-group">
+                        <label for="adopterPhone">Telefon *</label>
+                        <input type="tel" id="adopterPhone" required placeholder="07xxxxxxxx">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="adopterEmail">Adresă de e-mail *</label>
+                    <input type="email" id="adopterEmail" required placeholder="ion.popescu@gmail.com">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="adopterHousing">Tipul locuinței *</label>
+                        <select id="adopterHousing" class="custom-select">
+                            <option value="apartament">Apartament</option>
+                            <option value="casa_curte">Casă cu curte</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="adopterExperience">Ai mai avut animale? *</label>
+                        <select id="adopterExperience" class="custom-select">
+                            <option value="da">Da, am experiență</option>
+                            <option value="nu">Nu, ar fi primul meu animal</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-ghost" id="cancelAdoptBtn">Anulează</button>
+                    <button type="submit" class="btn btn-primary" id="submitAdoptBtn">Trimite Cererea</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Dă un Animal spre Adopție -->
+    <div class="modal-backdrop" id="addPetModal">
+        <div class="modal-dialog">
+            <button class="modal-close" id="closeAddPetModalBtn">&times;</button>
+            <div class="modal-header">
+                <i class="fa-solid fa-hand-holding-heart modal-header-icon"></i>
+                <h3>Dă un Animal spre Adopție</h3>
+                <p>Înregistrează un companion salvat pentru a-i găsi o familie responsabilă.</p>
+            </div>
+            <form id="addPetForm" class="modal-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="newPetName">Nume *</label>
+                        <input type="text" id="newPetName" required placeholder="ex: Ciolănel sau Pisi-Cozonac">
+                    </div>
+                    <div class="form-group">
+                        <label for="newPetSpecies">Specie *</label>
+                        <select id="newPetSpecies" required class="custom-select">
+                            <option value="caine">Câine</option>
+                            <option value="pisica">Pisică</option>
+                            <option value="altele">Alte mici animale</option>
+                            <option value="ferma">Animal de fermă</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-ghost" id="cancelAddPetBtn">Anulează</button>
+                    <button type="submit" class="btn btn-primary"><i class="fa-solid fa-hand-holding-heart"></i> Dă spre adopție</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Sponsorizare Sanctuar -->
+    <div class="modal-backdrop" id="sponsorModal">
+        <div class="modal-dialog">
+            <button class="modal-close" id="closeSponsorModalBtn">&times;</button>
+            <div class="modal-header">
+                <i class="fa-solid fa-hand-holding-dollar modal-header-icon" style="color:#d97706;"></i>
+                <h3>Donație Lunară Sanctuar</h3>
+            </div>
+            <form id="sponsorForm" class="modal-form">
+                <div class="form-group">
+                    <label for="sponsorPetSelect">Animalul susținut:</label>
+                    <select id="sponsorPetSelect" class="custom-select">
+                        <option value="Simba">Simba - Leul African</option>
+                        <option value="Tara & Khan">Tara & Khan - Tigri Bengalezi</option>
+                        <option value="Baloo">Baloo - Urs Brun</option>
+                        <option value="Lupul Dac">Lupul Dac - Lup Carpatin</option>
+                        <option value="toate_animalele">Toate animalele din Sanctuar</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="sponsorName">Nume pe Certificat *</label>
+                    <input type="text" id="sponsorName" required placeholder="Numele tău">
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-ghost" id="cancelSponsorBtn">Anulează</button>
+                    <button type="submit" class="btn btn-circus">Confirmă Donația</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
